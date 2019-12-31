@@ -46,10 +46,11 @@ criterion = nn.BCELoss()
 if(arch == 'vgg16'):
     optimizer = optim.SGD(model.classifier.parameters(), lr=lr, momentum=.9)
 else:
-    cnn_params = list(model.transion_layer.parameters()) + list(model.bn_layer.parameters()) + \
-                 list(model.relu_layer.parameters()) + list(model.Linear_layer.parameters())
+    # cnn_params = list(model.transion_layer.parameters()) + list(model.bn_layer.parameters()) + \
+    #              list(model.relu_layer.parameters()) + list(model.Linear_layer.parameters())
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=.9)
-
+    for param in model.parameters():
+        print(param)
 
 # Training Model
 train_loss_list = setup.my_DLM(model, image_trainloader,  epochs, print_every, criterion, optimizer, device,
