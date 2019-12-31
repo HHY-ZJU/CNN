@@ -16,7 +16,7 @@ import setup
 
 
 data_dir = r'/kaggle/input/dataset/resize_img/resize_img'
-label_path = r'/kaggle/input/dataset/train_label_110_aug/train_label_110_aug'
+label_path = r'/kaggle/input/dataset/train_label_110_aug/train_label_110'
 checkpoint_path = '/kaggle/working' #results.cp_path
 arch = 'resnet50' #results.arch
 hidden_units = [1024,1024] #results.hidden_units
