@@ -37,7 +37,7 @@ else:
     
     
 # Loading Dataset
-image_trainloader, image_testloader, image_valloader, image_trainset = setup.loading_data1(data_dir, label_path)
+image_trainloader,  image_trainset = setup.loading_data1(data_dir, label_path)
 
 # Network Setup
 model, input_size, params = setup.make_model(arch, hidden_units, lr)
