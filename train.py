@@ -29,7 +29,6 @@ val_loss_list = []
 
 if gpu==True:
     using_gpu = torch.cuda.is_available()
-    torch.cuda.set_device(1)
     device = 'gpu'
     print('GPU On');
 else:
